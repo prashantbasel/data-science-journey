@@ -47,4 +47,35 @@
 
 
 
+#### Day 5 Loop through a dictionary 
+
+
+# student = {
+#     "name": "prashant",
+#     "age": 21,
+#     "course": "data science",
+#     "gpa": 3.5
+# }
+
+
+# for key, value in student.items():
+#     print(key, ":", value)
+
+
+
+students = [
+    {"name": "Prashant", "marks": 85},
+    {"name": "Hari", "marks": 62},
+    {"name": "Sita", "marks": 45},
+    {"name": "Ram", "marks": 91}
+]
+
+for student in students:
+    if student["marks"] >= 50:
+        print(student["name"], "-", student["marks"], "-", "pass")
+    else:
+        print(student["name"], "-", student["marks"], "-", "Fail")
+
+  
+
 
