@@ -63,19 +63,43 @@
 
 
 
-students = [
-    {"name": "Prashant", "marks": 85},
-    {"name": "Hari", "marks": 62},
-    {"name": "Sita", "marks": 45},
-    {"name": "Ram", "marks": 91}
-]
+# students = [
+#     {"name": "Prashant", "marks": 85},
+#     {"name": "Hari", "marks": 62},
+#     {"name": "Sita", "marks": 45},
+#     {"name": "Ram", "marks": 91}
+# ]
 
-for student in students:
-    if student["marks"] >= 50:
-        print(student["name"], "-", student["marks"], "-", "pass")
-    else:
-        print(student["name"], "-", student["marks"], "-", "Fail")
+# for student in students:
+#     if student["marks"] >= 50:
+#         print(student["name"], "-", student["marks"], "-", "pass")
+#     else:
+#         print(student["name"], "-", student["marks"], "-", "Fail")
 
   
+# task 1 and 2 
+
+# import csv
+
+# with open("cities.csv", "r") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         if int(row["population"])>500000:
+#             print(row["city"], "is in ", row["country"], "with population", row["population"])
 
 
+import csv
+
+passed = 0 
+failed = 0 
+
+with open("students.csv", "r") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        if int(row["marks"])>=50:
+            passed = passed + 1 
+        else:
+            failed = failed + 1
+
+print("passed: ", passed)
+print("Failed:", failed)
